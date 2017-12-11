@@ -1,0 +1,54 @@
+/*
+ Theme Name:   DimTheme
+ Description:  DimTheme for Mates academy
+ Author:       Dmitriy Syvushkin
+ Author URI:   http://example.com
+ Version:      1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         responsive-layout
+*/
+
+
+/* ----------- Import fonts ------------ */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i');
+
+/* ----------- Base classes and resets ------------ */
+body { background-color: #f5f5f5 !important; font-family: 'Roboto', sans-serif; color:#545454; margin:0; padding: 0;}
+.header { background-color: #fff; width: auto; padding: 11px 0 18px;}
+.clear { padding-left: 0 !important; padding-right: 0 !important; }
+.article { background-color: #f5f5f5; }
+.btn-orange { background-color: #ee4400; padding:7px 15px; border-radius: 0!important; color: #fff; }
+.btn-orange:hover { color: #fff; }
+
+/* ----------- Special classes ------------ */
+
+
+/* -------- Header --------*/
+.lnb { margin-top: 2%; }
+.lnb a { text-decoration: none; font-family: 'PT Serif', serif; font-style: italic;  font-size:0.8rem; text-transform: uppercase; }
+.llink { color: #282828; }
+
+.bloginfo { color: #eb3c00; font-family: 'Oswald', sans-serif; font-size: 3.36em; text-transform: uppercase; font-weight: 600; letter-spacing: -2px; }
+.blogdesc { font-family: 'PT Serif', serif; font-style: italic; color: #aaaaaa; margin: 0 0 0 8px; word-spacing: 2px; }
+
+
+/* ----------- Top menu ------------ */
+.navbar { padding: 0 !important;}
+.menu { display: inline-block; -ms-flex-direction: column; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none;}
+.navbar li a { font-family: 'Oswald', sans-serif; color: #fff; font-size: 1.2rem; text-transform: uppercase; text-decoration: none; display: inline-block;}
+.navbar li a:hover { color: #fff; text-decoration: none; }
+.navbar ul li { list-style: none; height: 100%; display: inline-block; padding: 21px;}
+.navbar ul li:hover { background-color: #eb3c00; padding: 21px;  }
+.active { background-color: #eb3c00; padding: 10px;  }
+ul, li { -webkit-margin-before:0!important; -webkit-margin-after:0!important;}
+.menu-bg { background-color: #282828; }
+
+/*------------ Article. Post, page content ---------------*/
+.article h1 { font-family: 'Oswald',sans-serif; font-size: 3.2rem; font-weight: 400; margin: 6.8% 0 4.6% 0; word-spacing: -1.5px; padding-left: 3px; }
+.article h2 { font-family: 'PT Serif', sans-serif; font-size: 1.6rem; line-height: 1.5; margin-bottom: 4%;}
+.article p, ul, li { font-family: 'PT Serif', sans-serif; }
+
+/* ------------ Media queries ----------- */
