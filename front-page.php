@@ -22,5 +22,11 @@ get_header(); ?>
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="row">
+        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("New Sidebar") ) : ?>
+        <?php endif; ?>
+    </div>
+</div>
 
 <?php get_footer(); ?>

@@ -51,4 +51,8 @@ ul, li { -webkit-margin-before:0!important; -webkit-margin-after:0!important;}
 .article h2 { font-family: 'PT Serif', sans-serif; font-size: 1.6rem; line-height: 1.5; margin-bottom: 4%;}
 .article p, ul, li { font-family: 'PT Serif', sans-serif; }
 
+/* ------------ Widget ----------- */
+.widget-title { font-family: 'Oswald',sans-serif; color: #eb3c00; text-transform: uppercase; font-size: 0.95rem; }
+
+
 /* ------------ Media queries ----------- */

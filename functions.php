@@ -63,9 +63,45 @@ endif;
 
 add_action( 'after_setup_theme', 'academy_setup' );
 
-//wp_enqueue_style('style', get_template_directory_uri() . '/style.css' );
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function academy_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Blog Sidebar', 'academy' ),
+        'id'            => 'sidebar-1',
+        'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'academy' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Under content', 'academy' ),
+        'id'            => 'sidebar-2',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'academy' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer', 'academy' ),
+        'id'            => 'sidebar-3',
+        'description'   => __( 'Add widgets here to appear in your footer.', 'academy' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'academy_widgets_init' );
+
 add_action( 'wp_enqueue_scripts', 'academy_scripts' );
-// add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
 function academy_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css');
@@ -75,3 +111,6 @@ function academy_scripts() {
 
 }
 show_admin_bar(false);
+
+add_theme_support( 'title-tag' );
+add_theme_support( 'customize-selective-refresh-widgets' );

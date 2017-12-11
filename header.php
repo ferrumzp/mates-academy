@@ -16,12 +16,12 @@
     <?php wp_head(); ?>
 
 </head>
-<body>
+<body <?php body_class(); ?>>
     <div class="header">
         <div class="container clear">
             <div class="row">
                 <div class="col-lg-9">
-                    <span class="bloginfo"><?php bloginfo(); ?></span><span class="blogdesc"><?php bloginfo('description'); ?></span>
+                    <span class="bloginfo"><?php echo get_bloginfo('name'); ?></span><span class="blogdesc"><?php echo get_bloginfo('description'); ?></span>
                 </div>
                 <div class="col-lg-3 lnb">
                     <a href="#" class="llink">Login</a>
